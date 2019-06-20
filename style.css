@@ -10,6 +10,13 @@ body {
     background-color: #c5c0c0;
 }
 
+.black {
+    padding: 15px;
+    background: #000000;
+    color: #fff;
+    margin: 10px 0 10px 0;
+}
+
 /* ------Header----- */
 .container {
     width: 80%;
@@ -116,6 +123,11 @@ aside #sidebar {
 #sidebar a {
     text-decoration: none;
     color: #2f2be4;
+}
+
+#sidebar a:hover {
+    color: #700202;
+
 }
 /* ----Properties----*/
 #properties .box {
