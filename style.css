@@ -82,3 +82,34 @@ header a:hover {
 #showcase p {
     font-size: 20px;
 }
+
+/* ----Boxes---- */
+
+#boxes .box{
+    width: 20%;
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+#boxes .box:hover
+{
+    background: rgb(241, 186, 4);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#boxes .box img {
+    width: 70%;
+}
+
+#boxes .box h4 {
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color:#f3d215;
+    background-color: #000000;
+    text-align: center;
+}
