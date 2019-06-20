@@ -10,6 +10,23 @@ body {
     background-color: #c5c0c0;
 }
 
+/* ----About Us---- */
+#abouts {
+    float: right;
+}
+
+#sidebar h1 {
+    font-size: 30px;
+}
+
+#sidebar h3 p {
+    float: left;
+    width: 65%;
+    color: #fff;
+}
+
+
+
 /* .black {
     padding: 15px;
     background: #000000;
