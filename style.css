@@ -117,6 +117,10 @@ aside #sidebar {
     text-decoration: none;
     color: #2f2be4;
 }
+
+#sidebar a:hover {
+    color: #7c0404;
+}
 /* ----Properties----*/
 #properties .box {
     color: rgb(0, 0, 0);
