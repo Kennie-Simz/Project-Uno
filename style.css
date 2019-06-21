@@ -114,10 +114,20 @@ header a:hover {
 }
 
 /* ----sidebar---- */
-aside #sidebar {
-    float: left;
-    width: 30%;
-    margin-top: 10px;
+
+.main{
+	float: right;
+	width: 70%;
+	padding:0 30px;
+	box-sizing: border-box;
+}
+#sidebar {
+	float: left;
+	width: 30%;
+	background-color: #333;
+	color: #fff;
+	padding:10px;
+	box-sizing: border-box;
 }
 
 #sidebar a {
@@ -165,7 +175,7 @@ aside #sidebar {
 
 footer {
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 100%;
     color:#f3d215;
     background-color: #000000;
     text-align: center;
