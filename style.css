@@ -10,6 +10,30 @@ body {
     background-color: #c5c0c0;
 }
 
+/* ----About Us---- */
+#abouts {
+    float: right;
+}
+
+#sidebar h1 {
+    font-size: 30px;
+}
+
+#sidebar h3 p {
+    float: left;
+    width: 65%;
+    color: #fff;
+}
+
+
+
+/* .black {
+    padding: 15px;
+    background: #000000;
+    color: #fff;
+    margin: 10px 0 10px 0;
+}*/
+
 /* ------Header----- */
 .container {
     width: 80%;
@@ -119,7 +143,7 @@ aside #sidebar {
 }
 
 #sidebar a:hover {
-    color: #7c0404;
+    color: #700202;
 }
 /* ----Properties----*/
 #properties .box {
