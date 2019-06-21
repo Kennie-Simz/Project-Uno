@@ -64,6 +64,15 @@ header .highlight {
 .hide-signup a:hover {
     color: #f81c1c;
 }
+
+.signin a {
+    text-decoration: none;
+    color: #2f2be4;
+}
+
+.signin a:hover {
+    color: #f81c1c;
+}
   
 .hide-signin, .is-signup .hide-signup { 
     opacity: 0;
