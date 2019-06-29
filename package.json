@@ -1,0 +1,19 @@
+{
+  "name": "project-uno",
+  "version": "1.0.0",
+  "description": "real-estate api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kmozart/Project-Uno.git"
+  },
+  "author": "Kennedy Nyongesa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kmozart/Project-Uno/issues"
+  },
+  "homepage": "https://github.com/Kmozart/Project-Uno#readme"
+}
