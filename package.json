@@ -1,0 +1,32 @@
+{
+  "name": "project-uno",
+  "version": "1.0.0",
+  "description": "real-estate api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kmozart/Project-Uno.git"
+  },
+  "author": "Kennedy Nyongesa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kmozart/Project-Uno/issues"
+  },
+  "homepage": "https://github.com/Kmozart/Project-Uno#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1"
+  }
+}
