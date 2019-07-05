@@ -1,3 +1,4 @@
+/* eslint-disable radix */
 const express = require('express');
 const uuid = require('uuid');
 
@@ -12,6 +13,7 @@ router.get('/', (req, res) => {
 
 // Get single User
 router.get('/:id', (req, res) => {
+  // eslint-disable-next-line radix
   const found = users.some(user => user.id === parseInt(req.params.id));
 
   if (found) {
