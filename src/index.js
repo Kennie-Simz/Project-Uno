@@ -1,6 +1,7 @@
-const express = require('express');
-const path = require('path');
-const logger = require('./middleware/logger');
+import express from 'express';
+import userRouter from '../routes/auth';
+import propertyRouter from '../routes/property';
+import logger from '../middleware/logger';
 
 
 const app = express();
@@ -15,7 +16,8 @@ app.use(express.urlencoded({ extended: false }));
 // Static folder
 app.use(express.static(path.join(__dirname, 'Project-Uno')));
 
-app.use('/api/v1/user', require('./routes/users'));
+app.use('/api/v1/auth', userRouter);
+app.use('/api/v1/property', propertyRouter);
 
 const PORT = process.env.port || 4000;
 

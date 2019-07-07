@@ -4,9 +4,9 @@
   "description": "real-estate api",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "nodemon --exec src/index.js",
     "dev": "nodemon index",
-    "test": "mocha || true",
+    "test": "mocha --require @babel/register 'test/**/**spec.js'",
     "lint": "eslint .",
     "build": "nodemon --exec babel-node bin/dev"
   },
