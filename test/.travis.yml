@@ -16,6 +16,6 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  github-token: $JWT_KEY
   on:
-    branch: gh-pages
+    branch: master
