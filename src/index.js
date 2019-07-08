@@ -11,7 +11,6 @@ app.use(logger);
 
 // Body parser middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
 // Static folder
 app.use(express.static(__dirname, 'Project-Uno'));
