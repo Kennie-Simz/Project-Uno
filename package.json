@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Kmozart/Project-Uno#readme",
   "dependencies": {
+    "cloudinary": "^1.14.0",
     "express": "^4.17.1",
     "moment": "^2.24.0",
     "uuid": "^3.3.2"
