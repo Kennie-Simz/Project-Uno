@@ -1,8 +1,21 @@
 language: node_js
 node_js:
   - "stable"
-cache:
-  directories:
+cache: - yarn
+
+directories:
   - node_modules
+
+install: 
+  -yarn install
+
 script:
   - npm test
+  -yarn run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: gh-pages
