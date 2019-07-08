@@ -1,13 +1,13 @@
 import express from 'express';
 import userRouter from '../routes/auth';
 import propertyRouter from '../routes/property';
-import logger from '../middleware/logger';
+// import logger from '../middleware/logger';
 
 
 const app = express();
 
 // Init Middleware
-app.use(logger);
+// app.use(logger);
 
 // Body parser middleware
 app.use(express.json());

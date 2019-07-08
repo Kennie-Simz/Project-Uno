@@ -11,7 +11,7 @@ describe('true or false', () => {
   it('true is true', () => {
     expect(true).to.eql(true);
   });
-  
+
   it('false is false', () => {
     expect(false).to.eql(false);
   });
@@ -19,12 +19,12 @@ describe('true or false', () => {
 
 chai.use(chaiHttp);
 
-describe('users', function () {
+describe('users', () => {
         done(err);
-      }) 
-    });
+      });
+// });
 
-  context('POST /sign-up', function () {
+context('POST /sign-up', () => {
     beforeEach(function (done) {
       content.User.remove();
       done();
