@@ -7,6 +7,7 @@ propertyRouter.post('/', (req, res) => {
   res.send('We are on property');
 });
 
+//
 propertyRouter.patch('/:id', (req, res) => {
   res.send('We are on users');
 });
