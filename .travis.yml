@@ -2,22 +2,9 @@ language: node_js
 node_js:
   - "10.7.0"
   - "node"
-cache: - yarn
-
-directories:
-  - node_modules
-
-install: 
-  -yarn install
-
+before_script:
+  -
 script:
-  - npm test
-  -yarn run build
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $JWT_KEY
-  local_dir: build
-  on:
-    branch: master
+  -npm run tests
+after_success:
+  -npm run test: coveralls
