@@ -12,5 +12,3 @@ app.use('/api/v1/auth', userRouter);
 app.use('/api/v1/property', propertyRouter);
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
-
-app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
