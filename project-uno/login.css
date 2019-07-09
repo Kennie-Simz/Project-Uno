@@ -1,0 +1,99 @@
+* {
+    margin: 0%;
+    padding: 0;
+}
+
+/* ------Header----- */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #000000;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #f3d215 3px solid;
+}
+
+header .highlight {
+    color: #f3d215;
+    font-weight: bold;
+}
+
+#logo {
+    float: left;
+    margin: 0;
+}
+
+/* ----Login/Signup----*/
+.title {
+    text-align: center;
+    padding-top: 40px;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.form-horizontal {
+    width: 100%;
+    padding-left: 30%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.form-horizontal input {
+    width: 40%;
+    height: 50%;
+    flex-direction: column;
+    align-content: center;
+    color: #000000;
+    padding-top: 20px;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+.hide-signup a {
+    text-decoration: none;
+    color: #2f2be4;
+}
+
+.hide-signup a:hover {
+    color: #f81c1c;
+}
+
+.signin a {
+    text-decoration: none;
+    color: #2f2be4;
+}
+
+.signin a:hover {
+    color: #f81c1c;
+}
+  
+.hide-signin, .is-signup .hide-signup { 
+    opacity: 0;
+    max-height: 0px;
+    margin-bottom: 0;
+    transition: .5s;
+    pointer-events: none;
+}
+  
+.is-signup .hide-signin {
+    opacity: 1;
+    margin-bottom: 15px;
+    max-height: 100px;
+    pointer-events: auto;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 50%;
+    color:#f3d215;
+    background-color: #000000;
+    text-align: center;
+    font-size: 10px;
+}
