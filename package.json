@@ -1,14 +1,12 @@
 {
   "name": "project-uno",
   "version": "1.0.0",
-  "description": "real-estate api",
-  "main": "index.js",
+  "description": "Real Estate API",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --exec src/index.js",
-    "dev": "nodemon index",
+    "start": "nodemon --exec babel-node src/index.js",
     "test": "mocha --require @babel/register 'test/**/**spec.js'",
-    "lint": "eslint .",
-    "build": "nodemon --exec babel-node bin/dev"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -21,18 +19,17 @@
   },
   "homepage": "https://github.com/Kmozart/Project-Uno#readme",
   "dependencies": {
-    "cloudinary": "^1.14.0",
-    "express": "^4.17.1",
-    "moment": "^2.24.0",
-    "uuid": "^3.3.2"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.5.0",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/register": "^7.4.4",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1"
