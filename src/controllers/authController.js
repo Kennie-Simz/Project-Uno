@@ -1,6 +1,7 @@
+import jwt from 'jsonwebtoken';
 import Users from '../models/authModel';
-import jwt from "jsonwebtoken";
-import { APP_SECRET } from "../config";
+
+import { APP_SECRET } from '../config';
 
 class authController {
   static getUsers(req, res) {
@@ -30,7 +31,7 @@ class authController {
       expiresIn: "24h" // expires in 24 hours
     });
     return res.status(200).json({
-      status: 'success',
+      message: 'success',
       data: {
         token,
         id: newId,
