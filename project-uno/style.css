@@ -102,6 +102,7 @@ header a:hover {
 #logo {
     float: left;
     margin: 0;
+    font-size: 20px;
 }
 
 /* ----Showcase---- */
@@ -179,7 +180,7 @@ header a:hover {
 }
 /* ----Properties----*/
 #properties .box {
-    color: rgb(0, 0, 0);
+    color: rgb(235, 180, 2);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
