@@ -7,27 +7,47 @@ body {
     font-size: 15px;
     line-height: 1.5;
     padding: 0;
-    background-color: #c5c0c0;
+    background-color: #000000;
 }
 
 /* ----About Us---- */
-#abouts {
-    float: right;
-}
-
-#sidebar h1 {
-    font-size: 30px;
-}
-
-#sidebar h3 p {
-    float: left;
-    width: 65%;
+.about {
+    background: #8d7907;
+    text-align: center;
     color: #fff;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
+.about h1 {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about p {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.search-btn {
+    padding: 0px 15px 0px 15px;
+    margin-top: 10px;
+    color: #ffffff;
+    height: 40px;
+    background: rgb(7, 68, 209);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-input {
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+}
 /* ------Header----- */
 .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
 }
@@ -52,7 +72,6 @@ header a {
     padding: 0 20px 0 20px;
     justify-content: center;
 }
-
 
 
 header ul {
@@ -87,11 +106,11 @@ header a:hover {
 
 /* ----Showcase---- */
 #showcase {
-    background: url('./images/showcase1.jpg') no-repeat 0 -50px;
+    background: url('../images/showcase1.jpg') no-repeat 0 -50px;
     background-position: center right;
     background-size: cover;
-    min-height: 400px;
-    margin-bottom: 20px;
+    height: 600px;
+    margin-bottom: 0px;
     text-align: center;
     color: rgb(255, 255, 255);
 }
@@ -122,7 +141,10 @@ header a:hover {
 }
 
 #boxes .box img {
-    width: 70%;
+    width: 150%;
+    height: auto;
+    justify-items: center;
+    padding-right: 10%;
 }
 
 #boxes .box h4 {
@@ -163,6 +185,7 @@ header a:hover {
     font-size: 15px;
     width: 20%;
     float: right;
+    padding-right: 50px;
     padding: 10px;
     text-align: center;
 }
@@ -175,7 +198,7 @@ header a:hover {
 }
 
 #properties .box a {
-    color: #2f2be4;
+    color: #f8b10b;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
@@ -192,10 +215,10 @@ header a:hover {
 /* ----Footer---- */
 
 footer {
-    padding: 20px;
-    margin-top: 70%;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color:#f3d215;
     background-color: #000000;
     text-align: center;
-    font-size: 10px;
+    font-size: 15px;
 }
