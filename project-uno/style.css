@@ -7,24 +7,44 @@ body {
     font-size: 15px;
     line-height: 1.5;
     padding: 0;
-    background-color: #c5c0c0;
+    background-color: #000000;
 }
 
 /* ----About Us---- */
-#abouts {
-    float: right;
-}
-
-#sidebar h1 {
-    font-size: 30px;
-}
-
-#sidebar h3 p {
-    float: left;
-    width: 65%;
+.about {
+    background: #8d7907;
+    text-align: center;
     color: #fff;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
+.about h1 {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about p {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.search-btn {
+    padding: 0px 15px 0px 15px;
+    margin-top: 10px;
+    color: #ffffff;
+    height: 40px;
+    background: rgb(7, 68, 209);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-input {
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+}
 /* ------Header----- */
 .container {
     width: 100%;
@@ -165,6 +185,7 @@ header a:hover {
     font-size: 15px;
     width: 20%;
     float: right;
+    padding-right: 50px;
     padding: 10px;
     text-align: center;
 }
@@ -177,7 +198,7 @@ header a:hover {
 }
 
 #properties .box a {
-    color: #2f2be4;
+    color: #f8b10b;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
