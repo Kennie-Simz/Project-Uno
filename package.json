@@ -4,9 +4,11 @@
   "description": "real-estate api",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index",
+    "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "nodemon --exec babel-node bin/dev"
   },
   "repository": {
     "type": "git",
@@ -19,9 +21,14 @@
   },
   "homepage": "https://github.com/Kmozart/Project-Uno#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
