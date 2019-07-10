@@ -1,4 +1,7 @@
+import jwt from 'jsonwebtoken';
 import Users from '../models/authModel';
+
+import { APP_SECRET } from '../config';
 
 class authController {
   static getUsers(req, res) {
@@ -24,10 +27,13 @@ class authController {
       is_admin: false,
     };
     Users.push(newUser);
+    const token = jwt.sign({ id: newId }, APP_SECRET, {
+      expiresIn: "24h" // expires in 24 hours
+    });
     return res.status(200).json({
-      status: 'success',
+      message: 'success',
       data: {
-        token: 'hgahghjad',
+        token,
         id: newId,
         firstName,
         lastName,
