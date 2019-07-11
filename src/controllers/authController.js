@@ -28,7 +28,7 @@ class authController {
     };
     Users.push(newUser);
     const token = jwt.sign({ id: newId }, APP_SECRET, {
-      expiresIn: "24h" // expires in 24 hours
+      expiresIn: '24h', // expires in 24 hours
     });
     return res.status(200).json({
       message: 'success',

@@ -7,14 +7,14 @@ body {
     font-size: 15px;
     line-height: 1.5;
     padding: 0;
-    background-color: #000000;
+    background-color: #cfe8e6;
 }
 
 /* ----About Us---- */
 .about {
-    background: #8d7907;
+    background: #cfe8e6;
     text-align: center;
-    color: #fff;
+    color: #000000;
     padding-top: 70px;
     padding-bottom: 70px;
 }
@@ -53,15 +53,15 @@ body {
 }
 
 header {
-    background: #000000;
-    color: #fff;
+    background: #cfe8e6;
+    color: #000000;
     padding-top: 30px;
     min-height: 70px;
     border-bottom: #f3d215 3px solid;
 }
 
 header a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -90,12 +90,12 @@ header nav {
 }
 
 header .highlight {
-    color: #f3d215;
+    color: #000000;
     font-weight: bold;
 }
 
 header a:hover {
-    color: #f3d215;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -180,7 +180,7 @@ header a:hover {
 }
 /* ----Properties----*/
 #properties .box {
-    color: rgb(235, 180, 2);
+    color: #000000;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
@@ -199,7 +199,7 @@ header a:hover {
 }
 
 #properties .box a {
-    color: #f8b10b;
+    color: #000000;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
@@ -218,8 +218,46 @@ header a:hover {
 footer {
     padding-top: 50px;
     padding-bottom: 50px;
-    color:#f3d215;
-    background-color: #000000;
+    color:#000000;
+    background-color: #cfe8e6;
     text-align: center;
     font-size: 15px;
+}
+
+#contact
+{
+    background-color: #cfe8e6;
+    padding-top: 120px;
+    padding-bottom: 0px;
+    color: rgb(3, 3, 3); 
+}
+.contact-form 
+{
+    padding: 15px;
+}
+.message
+{
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+::placeholder
+{
+    color: rgba(26, 2, 241, 0.2) !important;
+}
+
+.follow
+{
+    background-color: #cfe8e6;
+    padding: 10px;
+    margin: 15px;
+}
+
+.follow a i .fa
+{
+    font-size: 40px;
+    margin: 20px auto;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
 }

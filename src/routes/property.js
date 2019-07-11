@@ -4,7 +4,7 @@ import propertyController from '../controllers/propertyController';
 const propertyRouter = express.Router();
 
 // Create a property ad
-propertyRouter.post('/',  propertyController.createProperty);
+propertyRouter.post('/', propertyController.createProperty);
 
 propertyRouter.patch('/:id', (req, res) => {
   res.send('We are on users');
