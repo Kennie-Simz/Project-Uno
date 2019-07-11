@@ -1,18 +1,15 @@
 import express from 'express';
 import propertyController from '../controllers/propertyController';
+import AuthRequired from '../middleware';
 
 const propertyRouter = express.Router();
 
 // Create a property ad
-propertyRouter.post('/', propertyController.createProperty);
+propertyRouter.post('/', AuthRequired, propertyController.createProperty);
 
-propertyRouter.patch('/:id', (req, res) => {
-  res.send('We are on users');
-});
+propertyRouter.patch('/:id', propertyController.updateProperty);
 
-propertyRouter.patch('/:id/sold', (req, res) => {
-  res.send('We are on users');
-});
+propertyRouter.patch('/:id/sold', propertyController.sellProperty);
 
 propertyRouter.delete('/:id', (req, res) => {
   res.send('We are on users');
