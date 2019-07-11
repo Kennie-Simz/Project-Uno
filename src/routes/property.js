@@ -1,10 +1,11 @@
 import express from 'express';
 import propertyController from '../controllers/propertyController';
+import AuthRequired from '../middleware';
 
 const propertyRouter = express.Router();
 
 // Create a property ad
-propertyRouter.post('/', propertyController.createProperty);
+propertyRouter.post('/', AuthRequired, propertyController.createProperty);
 
 propertyRouter.patch('/:id', (req, res) => {
   res.send('We are on users');

@@ -11,11 +11,11 @@ class propertyController {
   static createProperty(req, res) {
     const newId = parseInt(Property.length, 10) + 1;
     const {
-      id, owner, status, price, state, city, address, type, image_url,
+      status, price, state, city, address, type, image_url,
     } = req.body;
     const newProperty = {
       id: newId,
-      owner,
+      owner: req.decoded.id,
       status,
       price,
       state,
@@ -29,6 +29,7 @@ class propertyController {
       message: 'success',
       data: {
         id: newId,
+        owner: req.decoded.id,
         status,
         type,
         state,
