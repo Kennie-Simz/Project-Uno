@@ -1,9 +1,15 @@
 import jwt from 'jsonwebtoken';
-
-const config = require('../config.js');
+import { APP_SECRET } from './config';
 
 const checkToken = (req, res, next) => {
   let token = req.headers['x-access-token'] || req.headers.authorization; // Express headers are auto converted to lowercase
+
+  if (token === undefined || token === null) {
+    return res.json({
+      status: "failed",
+      message: 'No token provided',
+    });
+  }
   if (token.startsWith('Bearer ')) {
     // Remove Bearer from string
     token = token.slice(7, token.length);
@@ -11,7 +17,7 @@ const checkToken = (req, res, next) => {
 
   if (token) {
     // eslint-disable-next-line consistent-return
-    jwt.verify(token, config.secret, (err, decoded) => {
+    jwt.verify(token, APP_SECRET, (err, decoded) => {
       if (err) {
         return res.json({
           success: false,
