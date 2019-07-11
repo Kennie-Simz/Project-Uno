@@ -7,13 +7,9 @@ const propertyRouter = express.Router();
 // Create a property ad
 propertyRouter.post('/', AuthRequired, propertyController.createProperty);
 
-propertyRouter.patch('/:id', (req, res) => {
-  res.send('We are on users');
-});
+propertyRouter.patch('/:id', propertyController.updateProperty);
 
-propertyRouter.patch('/:id/sold', (req, res) => {
-  res.send('We are on users');
-});
+propertyRouter.patch('/:id/sold', propertyController.sellProperty);
 
 propertyRouter.delete('/:id', (req, res) => {
   res.send('We are on users');
