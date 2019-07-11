@@ -3,7 +3,7 @@
     padding: 0%;
 }
 body {
-    background-color: #000000;
+    background-color: #cfe8e6;
 }
 .admin {
   float: right;
@@ -17,7 +17,7 @@ body {
 }
 .topnav {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: #cfe8e6;
   }
   
   .topnav a {
@@ -36,8 +36,8 @@ body {
   }
   
   .topnav a.active {
-    background-color: rgb(243, 205, 33);
-    color: white;
+    background-color: #cfe8e6;
+    color: #000000;
   }
   
   
@@ -66,12 +66,12 @@ body {
 
 
 #container {
-    background-color: #000000;
+    background-color: #cfe8e6;
     text-decoration: none;
 }
 
 #container .logo {
-    color: #ffffff;
+    color: #000000;
     font-size: 30px;
     padding-left: 20px;
     text-decoration: none;
@@ -81,7 +81,7 @@ body {
     text-decoration: none;
     display: inline-block;
     padding: 0 20px 0 20px;
-    color: #ffc400;
+    color: #000000;
     justify-content: center;
 }
 
@@ -147,6 +147,6 @@ body {
     margin: 50px;
 }
 .subscribe {
-    color: #ffffff;
+    color: #000000;
     text-align: center;
 }

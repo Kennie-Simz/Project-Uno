@@ -6,11 +6,11 @@ import { APP_PORT } from './config';
 
 const app = express();
 app.use(
-    bodyParser.urlencoded({
-        // Middleware
-      extended: true,
-    })
-  );
+  bodyParser.urlencoded({
+    // Middleware
+    extended: true,
+  }),
+);
 app.use(bodyParser.json());
 
 app.use('/api/v1/auth', userRouter);
