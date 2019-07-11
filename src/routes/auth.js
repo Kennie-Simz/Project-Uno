@@ -9,8 +9,6 @@ userRouter.post('/signup', authController.createUser);
 userRouter.get('/signup', authController.getUsers);
 
 // Login a user
-userRouter.post('/signin', (req, res) => {
-  res.send('We are on users');
-});
+userRouter.post('/signin', authController.logUsers);
 
 export default userRouter;
