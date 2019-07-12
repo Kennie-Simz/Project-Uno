@@ -11,9 +11,7 @@ propertyRouter.patch('/:id', propertyController.updateProperty);
 
 propertyRouter.patch('/:id/sold', propertyController.sellProperty);
 
-propertyRouter.delete('/:id', (req, res) => {
-  res.send('We are on users');
-});
+propertyRouter.delete('/:id', propertyController.deleteProperty);
 
 propertyRouter.get('/:id', (req, res) => {
   res.send('We are on users');

@@ -53,7 +53,6 @@ class propertyController {
       status: 'error',
       error: 'Property not found',
     });
-
   }
 
   static sellProperty(req, res) {
@@ -69,6 +68,23 @@ class propertyController {
       return res.status(201).json({
         status: 'success',
         data: property,
+      });
+    }
+  }
+
+  static deleteProperty(req, res) {
+    const { id } = req.params;
+    const property = Property.find(deletedProperty => deletedProperty.id == id);
+    if (!property) {
+      res.status(400).json({
+        status: 'error',
+        error: 'Property id not found',
+      });
+    } else {
+      const delProperty = Property.filter(propertyDel => propertyDel.id !== id);
+      return res.status(201).json({
+        status: 'success',
+        data: delProperty,
       });
     }
   }
