@@ -224,8 +224,8 @@ footer {
     font-size: 15px;
 }
 
-#contact
-{
+#contact {
+    text-align: center;
     background-color: #cfe8e6;
     padding-top: 120px;
     padding-bottom: 0px;
