@@ -1,2 +1,2 @@
-const properties = [];
+let properties = [];
 export default properties;

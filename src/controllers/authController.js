@@ -11,11 +11,11 @@ class authController {
     });
   }
 
-  static logUsers(req, res, next) {
-    const {email, password } = req.body;
-    const logUser = Users.find(function (item) { return item.email === email; });
-    if(logUser){
-      if(logUser.password === password){
+  static logUsers(req, res) {
+    const { email, password } = req.body;
+    const logUser = Users.find((item) => item.email === email);
+    if (logUser) {
+      if (logUser.password === password) {
         const token = jwt.sign({ id: Users.id }, APP_SECRET, {
           expiresIn: '24h', // expires in 24 hours
         });
@@ -27,25 +27,24 @@ class authController {
             firstName: logUser.firstName,
             lastName: logUser.lastName,
             email: logUser.email,
-          }
-        }) 
-      }else{
-
+          },
+        });
+      } else {
         res.json({
           status: 'error',
           error: 'Password is incorrect',
           inputedPassword: password,
-          dbPassword: Users.password
-        })
+          dbPassword: Users.password,
+        });
       }
-    }else{
+    } else {
       res.json({
         status: 'error',
-        error: 'Email does not exist' 
-      })
+        error: 'Email does not exist',
+      });
     }
   }
-  
+
   static createUser(req, res) {
     const newId = parseInt(Users.length, 10) + 1;
     const {
