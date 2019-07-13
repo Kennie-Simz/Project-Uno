@@ -5,7 +5,7 @@ node_js:
 before_script:
   -
 
-  cache: - yarn
+  cache: - node
 
 directories:
   - node_modules
@@ -23,9 +23,9 @@ deploy:
   github-token: $JWT_KEY
   local_dir: build
   on:
-    branch: master
+    branch: develop
 
 script:
   -npm run tests
 after_success:
-  -npm run test: coveralls
+  -npm run test: npm run coveralls
