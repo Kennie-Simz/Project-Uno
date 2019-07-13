@@ -95,6 +95,8 @@ $git clone and cd in to project  and run the command below
 live demo of this project(UI)
 ```https://Kmozart.github.io/Project-Uno/```
 
+```https://project-uno-prolite.herokuapp.com```
+
 **Author**
 Kennedy Simiyu
 
