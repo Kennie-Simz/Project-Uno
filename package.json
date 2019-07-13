@@ -8,7 +8,7 @@
     "test": "mocha --require @babel/register 'test/**/**spec.js' --exit",
     "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
     "coveralls-coverage": "coveralls < lcov.info",
-    "coveralls": "nyc npm run test",
+    "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage",
     "lint": "eslint ."
   },
