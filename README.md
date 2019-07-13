@@ -67,7 +67,8 @@ $git clone and cd in to project  and run the command below
 
 
 
-                          **API Endpoints**
+
+                    **API Endpoints**    
 | **Methods**|      **Endpoints**        |         ***Functionality***    |
 |------------|---------------------------|--------------------------------|
 | **POST**   |  ``api/v1/auth/signup``   | Creates a user account         |
