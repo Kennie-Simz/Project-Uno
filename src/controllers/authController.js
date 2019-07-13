@@ -30,16 +30,14 @@ class authController {
           },
         });
       } else {
-        res.json({
-          status: 'error',
+        res.status(400).json({
+          status: '400',
           error: 'Password is incorrect',
-          inputedPassword: password,
-          dbPassword: Users.password,
         });
       }
     } else {
-      res.json({
-        status: 'error',
+      res.status(400).json({
+        status: '400',
         error: 'Email does not exist',
       });
     }
