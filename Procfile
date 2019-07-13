@@ -1,1 +1,1 @@
-web: node nodemon --exec babel-node bin/dev
+web: nodemon --exec babel-node bin/dev
