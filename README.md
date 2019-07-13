@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/Kmozart/Project-Uno/badge.svg?branch=develop)](https://coveralls.io/github/Kmozart/Project-Uno?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/Kmozart/Project-Uno/badge.svg)](https://coveralls.io/github/Kmozart/Project-Uno)
 
 [![Build Status](https://travis-ci.com/Kmozart/Project-Uno.svg?branch=develop)](https://travis-ci.com/Kmozart/Project-Uno)
 
