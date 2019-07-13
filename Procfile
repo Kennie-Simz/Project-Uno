@@ -1,0 +1,1 @@
+web: node nodemon --exec babel-node bin/dev
