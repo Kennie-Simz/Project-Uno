@@ -37,5 +37,39 @@ class propertyController {
       },
     });
   }
+
+  static updateProperty(req, res) {
+    const { id } = req.params;
+    const property = Property.find(updateProperty => updateProperty.id == id);
+    if (property) {
+      (property.status = req.body.status), (property.price = req.body.price);
+      return res.status(201).json({
+        status: 'success',
+        data: property,
+      });
+    }
+    res.status(400).json({
+      status: 'error',
+      error: 'Property not found',
+    });
+
+  }
+
+  static sellProperty(req, res) {
+    const { id } = req.params;
+    const property = Property.find(updateProperty => updateProperty.id == id);
+    if (!property) {
+      res.status(400).json({
+        status: 'error',
+        error: 'Property not found',
+      });
+    } else {
+      (property.status = 'sold');
+      return res.status(201).json({
+        status: 'success',
+        data: property,
+      });
+    }
+  }
 }
 export default propertyController;
