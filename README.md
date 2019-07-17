@@ -1,6 +1,6 @@
-[![Coverage Status](https://coveralls.io/repos/github/Kmozart/Project-Uno/badge.svg?branch=develop)](https://coveralls.io/github/Kmozart/Project-Uno?branch=develop)
+[![Build Status](https://travis-ci.com/Kmozart/Project-Uno.svg?branch=develop)](https://travis-ci.com/Kmozart/Project-Uno) [![Coverage Status](https://coveralls.io/repos/github/Kmozart/Project-Uno/badge.svg)](https://coveralls.io/github/Kmozart/Project-Uno)  
 
-[![Build Status](https://travis-ci.com/Kmozart/Project-Uno.svg?branch=develop)](https://travis-ci.com/Kmozart/Project-Uno)
+
 
 
 **Project Overview**
@@ -94,6 +94,8 @@ $git clone and cd in to project  and run the command below
 
 live demo of this project(UI)
 ```https://Kmozart.github.io/Project-Uno/```
+
+```https://project-uno-prolite.herokuapp.com```
 
 **Author**
 Kennedy Simiyu
