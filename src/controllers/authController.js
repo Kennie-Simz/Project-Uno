@@ -13,14 +13,15 @@ class authController {
 
   static logUsers(req, res) {
     const { email, password } = req.body;
-    const logUser = Users.find((item) => item.email === email);
+    const logUser = Users.find(item => item.email === email);
     if (logUser) {
       if (logUser.password === password) {
         const token = jwt.sign({ id: Users.id }, APP_SECRET, {
           expiresIn: '24h', // expires in 24 hours
         });
         res.json({
-          status: 'success',
+          status: '200',
+          message: 'Logged in',
           data: {
             token,
             id: logUser.id,
@@ -59,11 +60,14 @@ class authController {
       is_admin: false,
     };
     Users.push(newUser);
-    const token = jwt.sign({ id: newId }, APP_SECRET, {
+    const token = jwt.sign({
+      firstName, lastName, phoneNumber, address,
+    }, APP_SECRET, {
       expiresIn: '24h', // expires in 24 hours
     });
     return res.status(200).json({
-      message: 'success',
+      status: '200',
+      message: 'User created!',
       data: {
         token,
         id: newId,

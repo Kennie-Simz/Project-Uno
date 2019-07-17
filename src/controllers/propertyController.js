@@ -35,6 +35,7 @@ class propertyController {
         state,
         city,
         address,
+        image_url,
       },
     });
   }
@@ -60,13 +61,13 @@ class propertyController {
     const property = Property.find(updateProperty => updateProperty.id == id);
     if (!property) {
       res.status(400).json({
-        status: 'error',
+        status: 400,
         error: 'Property not found',
       });
     } else {
       (property.status = 'sold');
       return res.status(201).json({
-        status: 'success',
+        status: 201,
         data: property,
       });
     }
@@ -77,13 +78,13 @@ class propertyController {
     const property = Property.find(deletedProperty => deletedProperty.id == id);
     if (!property) {
       res.status(400).json({
-        status: 'error',
+        status: 400,
         error: 'Property id not found',
       });
     } else {
       const delProperty = Property.filter(propertyDel => propertyDel.id !== id);
       return res.status(201).json({
-        status: 'success',
+        status: 201,
         data: delProperty,
       });
     }
