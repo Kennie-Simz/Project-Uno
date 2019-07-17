@@ -26,7 +26,8 @@ class propertyController {
     };
     Property.push(newProperty);
     return res.status(200).json({
-      message: 'success',
+      status: 200,
+      message: 'successfully created!',
       data: {
         id: newId,
         owner: req.decoded.id,
@@ -50,7 +51,7 @@ class propertyController {
         data: property,
       });
     }
-    res.status(400).json({
+    res.status(404).json({
       status: 'error',
       error: 'Property not found',
     });
@@ -60,8 +61,8 @@ class propertyController {
     const { id } = req.params;
     const property = Property.find(updateProperty => updateProperty.id == id);
     if (!property) {
-      res.status(400).json({
-        status: 400,
+      res.status(404).json({
+        status: 404,
         error: 'Property not found',
       });
     } else {
@@ -77,14 +78,15 @@ class propertyController {
     const { id } = req.params;
     const property = Property.find(deletedProperty => deletedProperty.id == id);
     if (!property) {
-      res.status(400).json({
-        status: 400,
+      res.status(404).json({
+        status: 404,
         error: 'Property id not found',
       });
     } else {
       const delProperty = Property.filter(propertyDel => propertyDel.id !== id);
-      return res.status(201).json({
-        status: 201,
+      return res.status(200).json({
+        status: 200,
+        message: 'successfully deleted!',
         data: delProperty,
       });
     }

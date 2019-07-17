@@ -65,8 +65,8 @@ class authController {
     }, APP_SECRET, {
       expiresIn: '24h', // expires in 24 hours
     });
-    return res.status(200).json({
-      status: '200',
+    return res.status(201).json({
+      status: '201',
       message: 'User created!',
       data: {
         token,
