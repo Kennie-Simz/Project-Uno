@@ -7,7 +7,8 @@
     "start": "nodemon --exec babel-node bin/dev",
     "test": "mocha --require @babel/register 'test/**/**spec.js' --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "production": "nodemon --exec babel-node src/index.js"
   },
   "repository": {
     "type": "git",
