@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import Users from '../models/authModel';
-import query from '../database/query';
 import { APP_SECRET } from '../config';
 
 class authController {

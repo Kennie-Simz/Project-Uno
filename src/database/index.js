@@ -1,8 +1,8 @@
 import { Pool } from 'pg';
-import env from 'dotenv'
+import env from 'dotenv';
 /* DB_USER, DB_HOST, DB_NAME, DB_PASS, DB_PORT
 } from '../config'; */
-
+/*
 env.config();
 const pool = new Pool({
   connectionString: process.env.url,
@@ -11,7 +11,7 @@ const create = async () => {
   // const dropTables = 'DROP TABLE IF EXISTS users, properties';
   const users = `CREATE TABLE IF NOT EXISTS users (
        id serial PRIMARY KEY,
-       firstName VARCHAR(255) NOT NULL,
+       firstName VARCHAR(255) NOT NULL,z
        lastName  VARCHAR(255) NOT NULL,
        email  VARCHAR(255) NOT NULL UNIQUE,
        password  VARCHAR(255) NOT NULL,
@@ -36,8 +36,8 @@ const create = async () => {
        createdOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP
      )`;
 
-  //await pool.query(dropTables);
- //  console.log('Dropping tables');
+  // await pool.query(dropTables);
+  //  console.log('Dropping tables');
   await pool.query(users);
   console.log('users created');
   await pool.query(properties);
@@ -45,4 +45,4 @@ const create = async () => {
 };
 
 module.exports = create;
-export default pool;
+export default pool;*/

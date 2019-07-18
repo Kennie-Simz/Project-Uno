@@ -1,4 +1,4 @@
-// import pool from './index';
+ import pool from './index';
 
 // self invoking async function
 module.exports = async () => {
