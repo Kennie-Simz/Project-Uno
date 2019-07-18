@@ -9,7 +9,6 @@ const pool = new Pool({
 });
 const create = async () => {
   // const dropTables = 'DROP TABLE IF EXISTS users, properties';
-
   const users = `CREATE TABLE IF NOT EXISTS users (
        id serial PRIMARY KEY,
        firstName VARCHAR(255) NOT NULL,
@@ -46,3 +45,4 @@ const create = async () => {
 };
 
 module.exports = create;
+export default pool;

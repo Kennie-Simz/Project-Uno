@@ -1,6 +1,8 @@
 import jwt from 'jsonwebtoken';
 import Users from '../models/authModel';
-
+import query from '../database/query';
+const q = 'SELECT * FROM users';
+const allusers = query.execute(q)
 import { APP_SECRET } from '../config';
 
 class authController {
