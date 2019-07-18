@@ -1,7 +1,7 @@
-import pool from './index';
+// import pool from './index';
 
 // self invoking async function
-(async () => {
+module.exports = async () => {
   const dropTables = `DROP TABLE IF EXISTS users, properties`;
 
   const users = `CREATE TABLE IF NOT EXISTS users (
@@ -38,4 +38,4 @@ import pool from './index';
   await pool.query(properties);
   console.log('properties created');
 
-})();
+};

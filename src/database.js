@@ -1,3 +1,9 @@
+import {Pool} from 'pg';
+import dotenv from 'dotenv'
+
+const pool = new Pool({connectionString: process.env.url});
+
+
 const createTables = async () => {
   console.log('pool');
   const users = `CREATE TABLE IF NOT EXISTS users (
@@ -26,6 +32,10 @@ const createTables = async () => {
      ownerId INTEGER REFERENCES users (id) ON DELETE CASCADE,
      createdOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    )`;
+
+  //  async runSql(sql, data=[]) {
+  //   const connection = await pool.connect();
+  //  }
   await pool.query(users);
   console.log('users created');
   await pool.query(properties);

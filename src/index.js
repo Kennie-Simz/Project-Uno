@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import userRouter from './routes/auth';
 import propertyRouter from './routes/property';
+import create from './database/index'
 import { APP_PORT } from './config';
 
 const app = express();
@@ -11,6 +12,8 @@ app.use(
     extended: true,
   }),
 );
+
+create();
 app.use(bodyParser.json());
 
 app.use('/api/v1/auth', userRouter);
