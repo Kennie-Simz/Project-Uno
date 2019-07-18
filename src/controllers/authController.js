@@ -61,7 +61,7 @@ class authController {
     };
     Users.push(newUser);
     const token = jwt.sign({
-      firstName, lastName, phoneNumber, address,
+      email, firstName,
     }, APP_SECRET, {
       expiresIn: '24h', // expires in 24 hours
     });
