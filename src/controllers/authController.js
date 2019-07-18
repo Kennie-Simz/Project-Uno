@@ -44,14 +44,14 @@ class authController {
     }
   }
 
-  static createUser(req, res) {
+  static async createUser(req, res) {
     const newId = parseInt(Users.length, 10) + 1;
     const {
       email, firstName, lastName, password, phoneNumber, address,
     } = req.body;
     const newUser = `INSERT INTO users
     VALUES ($1, $2, $3, $4, $5) `;
-    query.execute(newUser, [firstName, lastName, email, password, phoneNumber]);
+    const user = await query.execute(newUser, [firstName, lastName, email, password, phoneNumber]);
     const token = jwt.sign({
       email, firstName,
     }, APP_SECRET, {
