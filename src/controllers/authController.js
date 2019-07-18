@@ -13,37 +13,39 @@ class authController {
 
   static logUsers(req, res) {
     const { email, password } = req.body;
-    const logUser = Users.find(item => item.email === email);
-    if (logUser) {
-      if (logUser.password === password) {
-        const token = jwt.sign({ id: Users.id }, APP_SECRET, {
-          expiresIn: '24h', // expires in 24 hours
-        });
-        res.json({
-          status: '200',
-          message: 'Logged in',
-          data: {
-            token,
-            id: logUser.id,
-            firstName: logUser.firstName,
-            lastName: logUser.lastName,
-            email: logUser.email,
-          },
+    pool.query('SELECT * FROM users WHERE email = $1', [email], (err, results) => {
+      if (results.rowCount < 1) {
+        return res.status(400).json({
+          status: '400',
+          error: 'Email does not exist',
         });
       } else {
-        res.status(400).json({
-          status: '400',
-          error: 'Password is incorrect',
-        });
-      }
-    } else {
-      res.status(400).json({
-        status: '400',
-        error: 'Email does not exist',
-      });
-    }
-  }
+        if (password === results.rows[0].password) {
+          const token = jwt.sign({
+            id: results.rowCount.id, email: results.rowCount.email, firstName: results.rowCount.firstName,
+          }, APP_SECRET, {
+              expiresIn: '24h', // expires in 24 hours
+            });
+          return res.status(201).json({
+            status: '201',
+            data: {
+              token: token,
+              firstName: results.rows[0].firstname,
+              lastName: results.rows[0].lastname,
+              email: results.rows[0].email
+            },
+          })
+        } else {
+          return res.status(400).json({
+            status: '400',
+            message: 'Wrong password',
+            password: results.rows[0][0].password
+          })
+        }
 
+      }
+    })
+  }
   static createUser(req, res) {
     const {
       firstName, lastName, email, password, phoneNumber, address,
