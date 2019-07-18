@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 import Users from '../models/authModel';
 import { APP_SECRET } from '../config';
+import pool from '../database';
 
 class authController {
   static getUsers(req, res) {
@@ -44,37 +45,36 @@ class authController {
   }
 
   static createUser(req, res) {
-    const newId = parseInt(Users.length, 10) + 1;
     const {
-      email, firstName, lastName, password, phoneNumber, address,
+      firstName, lastName, email, password, phoneNumber, address,
     } = req.body;
-    const newUser = {
-      id: newId,
-      email,
-      firstName,
-      lastName,
-      password,
-      phoneNumber,
-      address,
-      is_admin: false,
-    };
-    Users.push(newUser);
-    const token = jwt.sign({
-      email, firstName,
-    }, APP_SECRET, {
-      expiresIn: '24h', // expires in 24 hours
-    });
-    return res.status(201).json({
-      status: '201',
-      message: 'User created!',
-      data: {
-        token,
-        id: newId,
-        firstName,
-        lastName,
-        email,
-      },
-    });
+    pool.query('INSERT INTO users \
+      (firstName, lastName, email, password, phoneNumber, address) \
+      VALUES ($1, $2, $3, $4, $5, $6)',
+    [firstName, lastName, email, password, phoneNumber, address], (error, results) => {
+      if(error){
+        return res.status(401).json({
+          message: 'Error',
+          error: error.detail
+        })
+      }
+      const token = jwt.sign({
+        id: res.insertId, email, firstName,
+      }, APP_SECRET, {
+        expiresIn: '24h', // expires in 24 hours
+      });
+      return res.status(201).json({
+        status: '201',
+        message: 'User created!',
+        data: {
+          token,
+          id: results.insertId,
+          firstName,
+          lastName,
+          email,
+        },
+      });
+    })
   }
 }
 export default authController;

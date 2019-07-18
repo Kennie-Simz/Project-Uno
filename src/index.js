@@ -13,7 +13,6 @@ app.use(
   }),
 );
 
-create();
 app.use(bodyParser.json());
 
 app.use('/api/v1/auth', userRouter);
