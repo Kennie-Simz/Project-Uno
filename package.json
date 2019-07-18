@@ -9,7 +9,7 @@
     "test": "mocha --require @babel/register 'test/**/**spec.js' --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint .",
-    "db:migrate": "babel-node src/database/index.js"
+    "db:migrate": "babel-node src/database/database.js"
   },
   "repository": {
     "type": "git",
