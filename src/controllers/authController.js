@@ -1,8 +1,6 @@
 import jwt from 'jsonwebtoken';
 import Users from '../models/authModel';
 import query from '../database/query';
-const q = 'SELECT * FROM users';
-const allusers = query.execute(q)
 import { APP_SECRET } from '../config';
 
 class authController {
@@ -51,17 +49,9 @@ class authController {
     const {
       email, firstName, lastName, password, phoneNumber, address,
     } = req.body;
-    const newUser = {
-      id: newId,
-      email,
-      firstName,
-      lastName,
-      password,
-      phoneNumber,
-      address,
-      is_admin: false,
-    };
-    Users.push(newUser);
+    const newUser = `INSERT INTO users
+    VALUES ($1, $2, $3, $4, $5) `;
+    query.execute(newUser, [firstName, lastName, email, password, phoneNumber]);
     const token = jwt.sign({
       email, firstName,
     }, APP_SECRET, {
