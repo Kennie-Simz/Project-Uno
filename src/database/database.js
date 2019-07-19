@@ -1,8 +1,8 @@
- import pool from './index';
+import pool from './index';
 
 // self invoking async function
 (async () => {
-  const dropTables = `DROP TABLE IF EXISTS users, properties`;
+  const dropTables = 'DROP TABLE IF EXISTS users, properties';
 
   const users = `CREATE TABLE IF NOT EXISTS users (
      id serial PRIMARY KEY,
@@ -38,5 +38,4 @@
   console.log('users created');
   await pool.query(properties);
   console.log('properties created');
-
 })();
