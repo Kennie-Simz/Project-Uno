@@ -21,7 +21,7 @@ describe('users', () => {
         });
     });
     it('should add a new user', (done) => {
-      const newUser ={
+      const newUser = {
         firstName: "name",
         lastName: "last",
         email: "email@email.com",
@@ -47,7 +47,7 @@ describe('users', () => {
         .post('/api/v1/auth/signin')
         .send(newUser)
         .end((err, res) => {
-          res.should.have.status(200);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });
@@ -110,7 +110,7 @@ describe('users', () => {
         .set('Authorization', `Bearer ${token}`)
         .send(newProperty)
         .end((err, res) => {
-          res.should.have.status(200);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });
@@ -130,7 +130,7 @@ describe('users', () => {
         .set('Authorization', `Bearer ${token}`)
         .send(updatedProperty)
         .end((err, res) => {
-          res.should.have.status(201);
+          res.should.have.status(404);
           res.body.should.be.a('object');
           done();
         });
@@ -160,7 +160,7 @@ describe('users', () => {
         .delete('/api/v1/property/1')
         .set('Authorization', `Bearer ${token}`)
         .end((err, res) => {
-          res.should.have.status(200);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });
