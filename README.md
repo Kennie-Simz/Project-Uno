@@ -91,6 +91,10 @@ $git clone and cd in to project  and run the command below
 
 ```https://kmozart.github.io/Project-Uno/```
 
+**Apiary Docs**
+
+```https://apidatabase.docs.apiary.io/#introduction/description-of-usual-server-responses:```
+
 
 live demo of this project(UI)
 ```https://Kmozart.github.io/Project-Uno/```
