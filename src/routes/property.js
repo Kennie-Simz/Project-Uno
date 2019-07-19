@@ -11,11 +11,9 @@ propertyRouter.patch('/:id', propertyController.updateProperty);
 
 propertyRouter.patch('/:id/sold', propertyController.sellProperty);
 
-propertyRouter.delete('/:id', propertyController.deleteProperty);
+propertyRouter.delete('/:id', AuthRequired, propertyController.deleteProperty);
 
-propertyRouter.get('/:id', (req, res) => {
-  res.send('We are on users');
-});
+propertyRouter.get('/:id', propertyController.getSingleProperty);
 
 propertyRouter.get('/', propertyController.getProperties);
 
