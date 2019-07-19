@@ -22,13 +22,13 @@ describe('users', () => {
     });
     it('should add a new user', (done) => {
       const newUser = {
-        email: 'abcde@cru.com',
-        firstName: 'Jason',
-        lastName: 'Ashu',
-        password: 'newpassword',
-        phoneNumber: '0706958423',
-        address: '12th Mpale',
-      };
+        firstName: "name",
+        lastName: "last",
+        email: "email@email.com",
+        password: "password",
+        address: "address",
+        phoneNumber: "982398234"
+      }
       chai.request(app)
         .post('/api/v1/auth/signup')
         .send(newUser)
@@ -40,14 +40,14 @@ describe('users', () => {
     });
     it('should log in a registered user', (done) => {
       const newUser = {
-        'email': 'abcde@cru.com',
-        'password': 'newpassword',
+        'email': 'email@email.com',
+        'password': 'password',
       };
       chai.request(app)
         .post('/api/v1/auth/signin')
         .send(newUser)
         .end((err, res) => {
-          res.should.have.status(200);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });
@@ -93,25 +93,24 @@ describe('users', () => {
         });
     });
     it('should add a new property listing', (done) => {
-      const token = jwt.sign({ id: 1 }, APP_SECRET, {
+      const token = jwt.sign({ id: 1, email: 'email@email.com', firstName: 'name', phoneNumber: '98328923' }, APP_SECRET, {
         expiresIn: '24h', // expires in 24 hours
       });
       const newProperty = {
-        owner: 'Jon Doe',
-        status: 'for sale',
-        'price': 'kes. 12345',
-        state: 'Kwae',
-        city: 'Nairobi',
-        address: '254 Mpaka',
-        type: '2 br apartment',
-        image_url: 'image_url',
-      };
+        title: "sometitle",
+        type: "mansion",
+        price: "2334",
+        address: "233",
+        state: "Kisum",
+        imageUrl: "someudrl",
+        description: "somedesc"
+      }
       chai.request(app)
         .post('/api/v1/property')
         .set('Authorization', `Bearer ${token}`)
         .send(newProperty)
         .end((err, res) => {
-          res.should.have.status(200);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });
@@ -131,7 +130,7 @@ describe('users', () => {
         .set('Authorization', `Bearer ${token}`)
         .send(updatedProperty)
         .end((err, res) => {
-          res.should.have.status(201);
+          res.should.have.status(404);
           res.body.should.be.a('object');
           done();
         });
@@ -161,7 +160,7 @@ describe('users', () => {
         .delete('/api/v1/property/1')
         .set('Authorization', `Bearer ${token}`)
         .end((err, res) => {
-          res.should.have.status(200);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });

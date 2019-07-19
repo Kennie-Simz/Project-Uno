@@ -6,11 +6,10 @@
   "scripts": {
     "start": "babel-node src/index.js",
     "start-dev": "nodemon --exec babel-node src/index.js",
-    "test": "mocha --require @babel/register 'test/**/**spec.js' --exit",
+    "test": "babel-node src/database/database.js && mocha --require @babel/register 'test/**/**spec.js' --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint .",
-    "db:migrate": "babel-node src/database/database.js",
-    "test-email": "babel-node src/validations/index.js"
+    "db:migrate": "babel-node src/database/database.js"
   },
   "repository": {
     "type": "git",
