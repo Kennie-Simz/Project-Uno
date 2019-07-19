@@ -1,11 +1,11 @@
 import { Pool } from 'pg';
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'projectuno',
-  password: '0703625710',
+  user: process.env.HEROKU_USER || 'postgres',
+  host: process.env.HEROKU_HOST || 'localhost',
+  database: process.env.HEROKU_DB ||  'projectuno',
+  password: process.env.HEROKU_PASS || '0703625710',
   port: 5432
 });
 
-export default pool;
+export default pool; 
