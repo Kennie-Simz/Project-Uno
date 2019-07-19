@@ -12,7 +12,7 @@ Clone the project to your computer using this command
 ```git clone:```
 ```git@github.com:Kmozart/Project-Uno.git)```
 
-Preprequisites
+Prerequisites
 Make sure you have node js and postman installed on your computer.
 
 Ensure to have the following prerequisites: 
