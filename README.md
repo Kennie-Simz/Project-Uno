@@ -24,6 +24,7 @@ Ensure to have the following prerequisites:
 
 *Then ensure to have... *
 
+
 - Dependencies and development dependencies installed with the following commands in your terminal.
 ``npm install``
 
