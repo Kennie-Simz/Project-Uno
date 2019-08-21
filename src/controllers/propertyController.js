@@ -126,7 +126,7 @@ class propertyController {
           }
         })
       } else {
-        res.status(200).json({
+        res.status(40).json({
           status: '404',
           message: `Property with id ${id} not found`
         })

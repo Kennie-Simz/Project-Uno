@@ -33,7 +33,7 @@ describe('users', () => {
         .post('/api/v1/auth/signup')
         .send(newUser)
         .end((err, res) => {
-          res.should.have.status(401);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });
@@ -160,7 +160,7 @@ describe('users', () => {
         .delete('/api/v1/property/1')
         .set('Authorization', `Bearer ${token}`)
         .end((err, res) => {
-          res.should.have.status(200);
+          res.should.have.status(201);
           res.body.should.be.a('object');
           done();
         });
