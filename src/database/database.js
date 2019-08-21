@@ -14,7 +14,7 @@ import pool from './index';
      address VARCHAR(255) NOT NULL,
      isAdmin boolean DEFAULT false,
      createdOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)`; 
+)`;
 
   const properties = `CREATE TABLE IF NOT EXISTS properties (
      id serial PRIMARY KEY,
@@ -32,8 +32,8 @@ import pool from './index';
      createdOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    )`;
 
- /* await pool.query(dropTables);
-  console.log('Dropping tables');*/
+  await pool.query(dropTables);
+  console.log('Dropping tables');
   await pool.query(users);
   console.log('users created');
   await pool.query(properties);
